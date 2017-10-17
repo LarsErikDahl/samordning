@@ -6,10 +6,10 @@
 
     <groupId>no.nav.samordning</groupId>
     <artifactId>samordning-appconfig</artifactId>
-     <parent>
-         <groupId>no.nav.samordning</groupId>
-         <artifactId>samordning-parent</artifactId>
-         <version>1.0-SNAPSHOT</version>
-     </parent>
+    <parent>
+        <groupId>no.nav.samordning</groupId>
+        <artifactId>samordning-parent</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
 
 </project>
