@@ -1,3 +1,4 @@
 .idea/
 target/
 *.iml
+xsd/src/main/java/
