@@ -2,3 +2,4 @@
 target/
 *.iml
 xsd/src/main/java/
+wsdl/src/main/java/

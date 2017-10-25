@@ -28,6 +28,11 @@
             <artifactId>samordning-xsd</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>no.nav.samordning</groupId>
+            <artifactId>samordning-wsdl</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 
     <build>

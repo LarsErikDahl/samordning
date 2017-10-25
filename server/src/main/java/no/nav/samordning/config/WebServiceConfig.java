@@ -9,6 +9,8 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.ws.config.annotation.EnableWs;
 import org.springframework.ws.transport.http.MessageDispatcherServlet;
 import org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition;
+import org.springframework.ws.wsdl.wsdl11.SimpleWsdl11Definition;
+import org.springframework.ws.wsdl.wsdl11.Wsdl11Definition;
 import org.springframework.xml.xsd.SimpleXsdSchema;
 import org.springframework.xml.xsd.XsdSchema;
 
@@ -30,6 +32,14 @@ public class WebServiceConfig {
         wsdl11Definition.setLocationUri("/ws");
         wsdl11Definition.setTargetNamespace(TestObjectEndpoint.NAMESPACE_URI);
         wsdl11Definition.setSchema(testObjectSchema);
+        return wsdl11Definition;
+    }
+
+    @Bean(name = "testwsdl")
+    public Wsdl11Definition defaultWsdl11Definition() {
+        SimpleWsdl11Definition wsdl11Definition = new SimpleWsdl11Definition();
+        wsdl11Definition.setWsdl(new ClassPathResource("/test.wsdl"));
+
         return wsdl11Definition;
     }
 
