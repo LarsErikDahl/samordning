@@ -4,14 +4,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>no.nav.samordning.wsdl</groupId>
-    <artifactId>samordning-wsdl</artifactId>
-    <version>1-SNAPSHOT</version>
+    <groupId>no.nav.samordning</groupId>
+    <artifactId>varslev-vedtak-samordning</artifactId>
     <packaging>pom</packaging>
+    <version>1-SNAPSHOT</version>
 
     <modules>
-        <module>varsle-vedtak-samordning</module>
-        <module>varsle-vedtak-nav</module>
+        <module>wsdlgeninngaende</module>
+        <module>wsdlgenutgaende</module>
     </modules>
+
 
 </project>

@@ -20,6 +20,7 @@
         <module>wsdl</module>
         <module>server</module>
         <module>appconfig</module>
+        <module>varslevvedtaksamordning</module>
     </modules>
 
     <distributionManagement>

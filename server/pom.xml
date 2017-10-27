@@ -33,6 +33,16 @@
             <artifactId>samordning-wsdl</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>no.nav.samordning.wsdl</groupId>
+            <artifactId>varsle-vedtak-samordning-wsdl</artifactId>
+            <version>1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>no.nav.samordning</groupId>
+            <artifactId>wsdl-gen-inngaende</artifactId>
+            <version>1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>
