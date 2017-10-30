@@ -10,7 +10,6 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>xsd</module>
         <module>wsdl</module>
         <module>server</module>
         <module>appconfig</module>

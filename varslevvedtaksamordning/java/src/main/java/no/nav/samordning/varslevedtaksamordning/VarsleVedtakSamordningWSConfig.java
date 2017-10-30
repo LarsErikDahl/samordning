@@ -12,7 +12,7 @@ import org.springframework.ws.wsdl.wsdl11.Wsdl11Definition;
 
 @EnableWs
 @Configuration
-public class VarsleVedtakWSConfig {
+public class VarsleVedtakSamordningWSConfig {
     @Bean
     public ServletRegistrationBean messageDispatcherServlet(ApplicationContext applicationContext) {
         MessageDispatcherServlet servlet = new MessageDispatcherServlet();

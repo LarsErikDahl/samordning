@@ -9,17 +9,15 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>wsdlgenutgaende</artifactId>
+    <artifactId>wsdl-gen-utgaende</artifactId>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>no.nav.samordning.wsdl</groupId>
-                <artifactId>varsle-vedtak-nav-wsdl</artifactId>
-                <version>1-SNAPSHOT</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>no.nav.samordning.wsdl</groupId>
+            <artifactId>varsle-vedtak-nav-wsdl</artifactId>
+            <version>1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>

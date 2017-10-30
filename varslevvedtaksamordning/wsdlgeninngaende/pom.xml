@@ -11,44 +11,13 @@
 
     <artifactId>wsdl-gen-inngaende</artifactId>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>no.nav.samordning.wsdl</groupId>
-                <artifactId>varsle-vedtak-samordning-wsdl</artifactId>
-                <version>1-SNAPSHOT</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
-
-    <!--build>
-        <plugins>
-            <plugin>
-                <groupId>no.nav.maven.plugins</groupId>
-                <artifactId>maven-wsdl-plugin</artifactId>
-                <version>1.18</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>wsdl2java</goal>
-                        </goals>
-                        <configuration>
-                            <wsdlOptions>
-                                <wsdlOption>
-                                    <wsdlArtifact>
-                                        <groupId>no.nav.samordning.wsdl</groupId>
-                                        <artifactId>varsle-vedtak-samordning-wsdl</artifactId>
-                                        <version>1-SNAPSHOT</version>
-                                    </wsdlArtifact>
-                                </wsdlOption>
-                            </wsdlOptions>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build-->
+    <dependencies>
+        <dependency>
+            <groupId>no.nav.samordning.wsdl</groupId>
+            <artifactId>varsle-vedtak-samordning-wsdl</artifactId>
+            <version>1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
@@ -63,7 +32,6 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <!--schemaDirectory>maven:no.nav.samordning.wsdl:varsle-vedtak-samordning-wsdl:::1-SNAPSHOT!/src/main/resources</schemaDirectory-->
                             <generateDirectory>${project.basedir}/src/main/java</generateDirectory>
                             <strict>false</strict>
                             <catalogs>
@@ -84,107 +52,7 @@
                         </configuration>
                     </execution>
                 </executions>
-                            <!--dependencyResource>
-                                <groupId>no.nav.samordning.wsdl</groupId>
-                                <artifactId>varsle-vedtak-samordning-wsdl</artifactId>
-                                <version>1-SNAPSHOT</version>
-                                <resource>no/nav/inf/SAMSamordning.wsdl</resource>
-                            </dependencyResource>
-                            <dependencyResource>
-                                <groupId>no.nav.samordning.wsdl</groupId>
-                                <artifactId>varsle-vedtak-samordning-wsdl</artifactId>
-                                <version>1-SNAPSHOT</version>
-                                <resource>no/nav/inf/SAMSamordning.wsdl</resource>
-                            </dependencyResource>
-                            <dependencyResource>
-                                <groupId>no.nav.samordning.wsdl</groupId>
-                                <artifactId>varsle-vedtak-samordning-wsdl</artifactId>
-                                <version>1-SNAPSHOT</version>
-                                <resource>no/nav/lib/sto/sam/fault/FaultStoPersonIkkeFunnet.xsd</resource>
-                            </dependencyResource>
-                            <dependencyResource>
-                                <groupId>no.nav.samordning.wsdl</groupId>
-                                <artifactId>varsle-vedtak-samordning-wsdl</artifactId>
-                                <version>1-SNAPSHOT</version>
-                                <resource>no/nav/lib/sto/sam/asbo/samordning/ASBOStoVarsleVedtakSamordningRequest.xsd</resource>
-                            </dependencyResource>
-                            <dependencyResource>
-                                <groupId>no.nav.samordning.wsdl</groupId>
-                                <artifactId>varsle-vedtak-samordning-wsdl</artifactId>
-                                <version>1-SNAPSHOT</version>
-                                <resource>no/nav/lib/sto/sam/asbo/samordning/ASBOStoVarsleTPSamordningRequest.xsd</resource>
-                            </dependencyResource>
-                            <dependencyResource>
-                                <groupId>no.nav.samordning.wsdl</groupId>
-                                <artifactId>varsle-vedtak-samordning-wsdl</artifactId>
-                                <version>1-SNAPSHOT</version>
-                                <resource>no/nav/lib/sto/sam/fault/FaultStoGenerisk.xsd</resource>
-                            </dependencyResource>
-                            <dependencyResource>
-                                <groupId>no.nav.samordning.wsdl</groupId>
-                                <artifactId>varsle-vedtak-samordning-wsdl</artifactId>
-                                <version>1-SNAPSHOT</version>
-                                <resource>no/nav/lib/sto/sam/fault/samordning/FaultStoTPNummerIkkeGyldig.xsd</resource>
-                            </dependencyResource>
-                            <dependencyResource>
-                                <groupId>no.nav.samordning.wsdl</groupId>
-                                <artifactId>varsle-vedtak-samordning-wsdl</artifactId>
-                                <version>1-SNAPSHOT</version>
-                                <resource>no/nav/lib/sto/sam/fault/samordning/FaultStoTSSEksternIdIkkeFunnet.xsd</resource>
-                            </dependencyResource>
-                            <dependencyResource>
-                                <groupId>no.nav.samordning.wsdl</groupId>
-                                <artifactId>varsle-vedtak-samordning-wsdl</artifactId>
-                                <version>1-SNAPSHOT</version>
-                                <resource>no/nav/lib/sto/sam/fault/samordning/FaultStoNAVHarIkkeWSGrensesnittMotTPOrdningen.xsd</resource>
-                            </dependencyResource>
-                            <dependencyResource>
-                                <groupId>no.nav.samordning.wsdl</groupId>
-                                <artifactId>varsle-vedtak-samordning-wsdl</artifactId>
-                                <version>1-SNAPSHOT</version>
-                                <resource>no/nav/lib/sto/sam/asbo/samordning/ASBOStoVarsleManglendeRefusjonskravRequest.xsd</resource>
-                            </dependencyResource>
-                            <dependencyResource>
-                                <groupId>no.nav.samordning.wsdl</groupId>
-                                <artifactId>varsle-vedtak-samordning-wsdl</artifactId>
-                                <version>1-SNAPSHOT</version>
-                                <resource>no/nav/lib/sto/sam/asbo/samordning/ASBOStoVarsleEndringPersonaliaRequest.xsd</resource>
-                            </dependencyResource>
-                            <dependencyResource>
-                                <groupId>no.nav.samordning.wsdl</groupId>
-                                <artifactId>varsle-vedtak-samordning-wsdl</artifactId>
-                                <version>1-SNAPSHOT</version>
-                                <resource>no/nav/lib/sto/sam/asbo/ASBOStoPerson.xsd</resource>
-                            </dependencyResource>
-                            <dependencyResource>
-                                <groupId>no.nav.samordning.wsdl</groupId>
-                                <artifactId>varsle-vedtak-samordning-wsdl</artifactId>
-                                <version>1-SNAPSHOT</version>
-                                <resource>no/nav/lib/sto/sam/asbo/person/ASBOStoPersonUtland.xsd</resource>
-                                <resource>no/nav/lib/sto/sam/asbo/ASBOStoPerson.xsd</resource>
-                            </dependencyResource-->
             </plugin>
         </plugins>
     </build>
-
-    <!--profiles>
-        <profile>
-            <id>dev</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.jvnet.jaxb2.maven2</groupId>
-                        <artifactId>maven-jaxb2-plugin</artifactId>
-                        <version>0.13.2</version>
-                        <executions>
-                            <execution>
-                                <id>varslevedtaksamodningwsdlgen</id>
-                                <phase>none</phase>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles-->
 </project>
