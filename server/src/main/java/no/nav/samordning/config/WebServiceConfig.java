@@ -35,14 +35,6 @@ public class WebServiceConfig {
         return wsdl11Definition;
     }
 
-    @Bean(name = "testwsdl")
-    public Wsdl11Definition defaultWsdl11Definition() {
-        SimpleWsdl11Definition wsdl11Definition = new SimpleWsdl11Definition();
-        wsdl11Definition.setWsdl(new ClassPathResource("/test.wsdl"));
-
-        return wsdl11Definition;
-    }
-
     @Bean(name = "varsleVedtakSamordning")
     public Wsdl11Definition defaultWsdl11Definitionvvs() {
         SimpleWsdl11Definition wsdl11Definition = new SimpleWsdl11Definition();
