@@ -1,7 +1,8 @@
 package no.nav.samordning.testwsdl;
 
-import nav_cons_sto_sam_samordning.no.nav.inf.VarsleVedtakSamordning;
-import nav_cons_sto_sam_samordning.no.nav.inf.VarsleVedtakSamordningResponse;
+import no.nav.samordning.varslevedtaksamordning.inf.ObjectFactory;
+import no.nav.samordning.varslevedtaksamordning.inf.VarsleVedtakSamordning;
+import no.nav.samordning.varslevedtaksamordning.inf.VarsleVedtakSamordningResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
@@ -11,7 +12,7 @@ import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
 @Endpoint
 public class VarsleVedtakSamordningEndpoint {
-    public static final String NAMESPACE_URI = "http://nav-cons-sto-sam-samordning/no/nav/inf";
+    public static final String NAMESPACE_URI = "http://nav.no/samordning/varslevedtaksamordning/inf";
 
     private static final Logger LOG = LoggerFactory.getLogger(VarsleVedtakSamordningEndpoint.class);
 
@@ -19,7 +20,7 @@ public class VarsleVedtakSamordningEndpoint {
     @ResponsePayload
     public VarsleVedtakSamordningResponse testQuery(@RequestPayload VarsleVedtakSamordning varsleVedtakSamordning) {
         LOG.info("reached 1");
-        nav_cons_sto_sam_samordning.no.nav.inf.ObjectFactory factory = new nav_cons_sto_sam_samordning.no.nav.inf.ObjectFactory();
+        ObjectFactory factory = new ObjectFactory();
         LOG.info("reached 2");
         VarsleVedtakSamordningResponse test = factory.createVarsleVedtakSamordningResponse();
         LOG.info("reached 3");
