@@ -27,17 +27,7 @@
         </dependency>
         <dependency>
             <groupId>no.nav.samordning</groupId>
-            <artifactId>samordning-xsd</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>no.nav.samordning.wsdl</groupId>
-            <artifactId>varsle-vedtak-samordning-wsdl</artifactId>
-            <version>1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>no.nav.samordning</groupId>
-            <artifactId>wsdl-gen-inngaende</artifactId>
+            <artifactId>varsle-vedtak-samordning-java</artifactId>
             <version>1-SNAPSHOT</version>
         </dependency>
     </dependencies>

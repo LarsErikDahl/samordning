@@ -5,13 +5,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>no.nav.samordning</groupId>
-    <artifactId>varslev-vedtak-samordning</artifactId>
+    <artifactId>varsle-vedtak-samordning</artifactId>
     <packaging>pom</packaging>
     <version>1-SNAPSHOT</version>
 
     <modules>
         <module>wsdlgeninngaende</module>
         <module>wsdlgenutgaende</module>
+        <module>java</module>
     </modules>
 
 
