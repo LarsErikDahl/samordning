@@ -1,5 +1,5 @@
 name: samordning
-image: docker.adeo.no:5000/samordning
+image: navikt/samordning
 replicas: # set min = max to disable autoscaling
   min: 1 # minimum number of replicas.
   max: 1 # maximum number of replicas
