@@ -46,7 +46,7 @@
                             </catalogs>
                             <schemas>
                                 <schema>
-                                    <url>http://varsle-vedtak-samordning/no/nav/inf/varsleVedtakSamordning.wsdl</url>
+                                    <url>http://varsle-vedtak-samordning/no/nav/inf/SAMSamordning.wsdl</url>
                                 </schema>
                             </schemas>
                         </configuration>
