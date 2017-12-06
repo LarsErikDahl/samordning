@@ -10,7 +10,6 @@
     <version>1-SNAPSHOT</version>
     <modules>
         <module>java</module>
-        <module>wsdlgeninngaende</module>
     </modules>
 
 

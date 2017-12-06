@@ -15,8 +15,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>no.nav.samordning.varslevedtakaap</groupId>
-            <artifactId>wsdl-gen-inngaende</artifactId>
+            <groupId>no.nav.samordning.wsdl</groupId>
+            <artifactId>varsle-vedtak-aap-wsdl</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
