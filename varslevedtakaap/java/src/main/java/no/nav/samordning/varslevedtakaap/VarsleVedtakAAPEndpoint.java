@@ -1,9 +1,8 @@
 package no.nav.samordning.varslevedtakaap;
 
-import no.nav.samordning.tjenester.varslevedtakaap.v1.ObjectFactory;
 import no.nav.samordning.tjenester.varslevedtakaap.v1.VarsleVedtakAAPSamordning;
-import no.nav.samordning.tjenester.varslevedtakaap.v1.VarsleVedtakAAPSamordningResponse;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
@@ -15,15 +14,13 @@ public class VarsleVedtakAAPEndpoint {
 
     public static final String NAMESPACE_URI = "http://nav.no/samordning/tjenester/varslevedtakaap/v1";
 
+    private static final Logger LOG = LoggerFactory.getLogger(VarsleVedtakAAPEndpoint.class);
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "varsleVedtakAAPSamordning")
     @ResponsePayload
-    public VarsleVedtakAAPSamordningResponse testQuery(@RequestPayload VarsleVedtakAAPSamordning varsleVedtakSamordning) {
-        ObjectFactory factory = new ObjectFactory();
-        VarsleVedtakAAPSamordningResponse test = factory.createVarsleVedtakAAPSamordningResponse();
-        test.setVarsleVedtakAAPSamordningResponse("Test v1");
-
-        return test;
+    public void testQuery(@RequestPayload VarsleVedtakAAPSamordning varsleVedtakAAPSamordning) {
+        LOG.info("varsleVedtakAAPSamordning er blitt kalt");
+        return;
     }
 }
 
