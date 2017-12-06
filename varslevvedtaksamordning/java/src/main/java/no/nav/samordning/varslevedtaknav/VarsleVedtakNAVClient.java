@@ -1,10 +1,9 @@
 package no.nav.samordning.varslevedtaknav;
 
+import nav_lib_cons_sto_sam.no.nav.lib.sto.sam.asbo.samordning.ASBOStoVarsleVedtakSamordningRequest;
 import no.nav.elsam.tpsamordningvarsling.v1_0.VarsleVedtakNAV;
 import no.nav.elsam.tpsamordningvarsling.v1_0.VarsleVedtakNAVReq;
 import no.nav.elsam.tpsamordningvarsling.v1_0.VarsleVedtakNAVResponse;
-import no.nav.samordning.lib.sto.sam.asbo.samordning.ASBOStoVarsleVedtakSamordningRequest;
-import no.nav.samordning.varslevedtaksamordning.inf.VarsleVedtakSamordning;
 import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
 
 public class VarsleVedtakNAVClient extends WebServiceGatewaySupport {

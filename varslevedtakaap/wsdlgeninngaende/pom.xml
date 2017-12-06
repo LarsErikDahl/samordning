@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>varslevedtakaap</artifactId>
+        <groupId>no.nav.samordning</groupId>
+        <version>1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>no.nav.samordning.varslevedtakaap</groupId>
+    <artifactId>wsdl-gen-inngaende</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>no.nav.samordning.wsdl</groupId>
+            <artifactId>varsle-vedtak-aap-wsdl</artifactId>
+            <version>1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.jvnet.jaxb2.maven2</groupId>
+                <artifactId>maven-jaxb2-plugin</artifactId>
+                <version>0.13.2</version>
+                <executions>
+                    <execution>
+                        <id>varslevedtakaapwsdlgen</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <generateDirectory>${project.basedir}/src/main/java</generateDirectory>
+                            <strict>false</strict>
+                            <catalogs>
+                                <catalog>
+                                    <dependencyResource>
+                                        <groupId>no.nav.samordning.wsdl</groupId>
+                                        <artifactId>varsle-vedtak-aap-wsdl</artifactId>
+                                        <version>1-SNAPSHOT</version>
+                                        <resource>catalog.cat</resource>
+                                    </dependencyResource>
+                                </catalog>
+                            </catalogs>
+                            <schemas>
+                                <schema>
+                                    <url>http://varsle-vedtak-aap/no/nav/samordning/tjenester/varslevedtakaap/v1/VarsleVedtakAAPSamordning.wsdl</url>
+                                </schema>
+                            </schemas>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

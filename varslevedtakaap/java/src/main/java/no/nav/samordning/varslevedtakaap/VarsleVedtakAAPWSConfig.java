@@ -1,4 +1,4 @@
-package no.nav.samordning.varslevedtaksamordning;
+package no.nav.samordning.varslevedtakaap;
 
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.ApplicationContext;
@@ -12,7 +12,7 @@ import org.springframework.ws.wsdl.wsdl11.Wsdl11Definition;
 
 @EnableWs
 @Configuration
-public class VarsleVedtakSamordningWSConfig {
+public class VarsleVedtakAAPWSConfig {
     @Bean
     public ServletRegistrationBean messageDispatcherServlet(ApplicationContext applicationContext) {
         MessageDispatcherServlet servlet = new MessageDispatcherServlet();
@@ -21,10 +21,10 @@ public class VarsleVedtakSamordningWSConfig {
         return new ServletRegistrationBean(servlet, "/ws/*");
     }
 
-    @Bean(name = "varsleVedtakSamordning")
+    @Bean(name = "varsleVedtakAAPv1")
     public Wsdl11Definition defaultWsdl11Definitionvvs() {
         SimpleWsdl11Definition wsdl11Definition = new SimpleWsdl11Definition();
-        wsdl11Definition.setWsdl(new ClassPathResource("/no/nav/inf/SAMSamordning.wsdl"));
+        wsdl11Definition.setWsdl(new ClassPathResource("/no/nav/samordning/tjenester/varslevedtakaap/v1/VarsleVedtakAAPSamordning.wsdl"));
 
         return wsdl11Definition;
     }

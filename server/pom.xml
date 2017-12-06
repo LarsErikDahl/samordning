@@ -30,6 +30,11 @@
             <artifactId>varsle-vedtak-samordning-java</artifactId>
             <version>1-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>no.nav.samordning.varslevedtakaap</groupId>
+            <artifactId>varsle-vedtak-aap-java</artifactId>
+            <version>1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>

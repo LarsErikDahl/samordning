@@ -1,11 +1,12 @@
 package no.nav.samordning.varslevedtaksamordning;
 
+import nav_cons_sto_sam_samordning.no.nav.inf.ObjectFactory;
+import nav_cons_sto_sam_samordning.no.nav.inf.VarsleVedtakSamordning;
+import nav_cons_sto_sam_samordning.no.nav.inf.VarsleVedtakSamordningResponse;
 import no.nav.samordning.varslevedtaknav.VarsleVedtakNAVClient;
-import no.nav.samordning.varslevedtaksamordning.inf.ObjectFactory;
-import no.nav.samordning.varslevedtaksamordning.inf.VarsleVedtakSamordning;
-import no.nav.samordning.varslevedtaksamordning.inf.VarsleVedtakSamordningResponse;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
@@ -14,7 +15,7 @@ import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
 @Endpoint
 public class VarsleVedtakSamordningEndpoint {
-    public static final String NAMESPACE_URI = "http://nav.no/samordning/varslevedtaksamordning/inf";
+    public static final String NAMESPACE_URI = "http://nav-cons-sto-sam-samordning/no/nav/inf";
 
     @Autowired
     VarsleVedtakNAVClient client;
