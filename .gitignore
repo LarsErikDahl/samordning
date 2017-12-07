@@ -1,9 +1,5 @@
 .idea/
 target/
 *.iml
-xsd/src/main/java/
-wsdl/src/main/java/
 varslevvedtaksamordning/wsdlgeninngaende/src/main/java/
 varslevvedtaksamordning/wsdlgenutgaende/src/main/java/
-varslevedtakaap/wsdlgeninngaende/src/main/java/
-wsdl/varsle-vedtak-aap/src/main/java/
