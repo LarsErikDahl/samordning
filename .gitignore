@@ -4,3 +4,4 @@ target/
 varslevvedtaksamordning/wsdlgeninngaende/src/main/java/
 varslevvedtaksamordning/wsdlgenutgaende/src/main/java/
 wsdl/varsle-vedtak-samordning/src/main/java/
+wsdl/varsle-vedtak-aap/src/main/java/
