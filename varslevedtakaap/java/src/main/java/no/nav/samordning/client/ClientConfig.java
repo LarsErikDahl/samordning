@@ -18,7 +18,7 @@ public class ClientConfig {
     @Bean
     public Client varsleVedtakAPPClient(Jaxb2Marshaller marshaller) {
         Client client = new Client();
-        client.setDefaultUri("http://localhost:3070");
+        client.setDefaultUri("http://localhost:8080/ws/varsleVedtakAAPSamordning_v1");
         client.setMarshaller(marshaller);
         client.setUnmarshaller(marshaller);
         return client;

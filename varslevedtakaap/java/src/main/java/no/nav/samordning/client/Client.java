@@ -11,8 +11,8 @@ import java.net.URL;
 public class Client extends WebServiceGatewaySupport {
 
     public void varsleVedtakAAP() throws VarsleVedtakAAPSamordningFeilFeilISendingMsg, VarsleVedtakAAPSamordningFeilVedtakIdIkkeFunnetMsg, VarsleVedtakAAPSamordningFeilHentVedtakFeilerMsg, VarsleVedtakAAPSamordningFeilTpnrIkkeFunnetMsg, MalformedURLException {
-        VarsleVedtakAAPSamordningV1 varsleVedtakAAPSamordning = new VarsleVedtakAAPSamordningV1(new URL("http://localhost:3070"));
-        no.nav.samordning.tjenester.varslevedtakaap.v1.VarsleVedtakAAPSamordningV1 port = varsleVedtakAAPSamordning.getVarsleVedtakAAPSamordningV1Port();
+        //VarsleVedtakAAPSamordningV1 varsleVedtakAAPSamordning = new VarsleVedtakAAPSamordningV1(new URL("http://localhost:8080/ws/varsleVedtakAAPSamordning_v1"));
+        ////no.nav.samordning.tjenester.varslevedtakaap.v1.VarsleVedtakAAPSamordningV1 port = varsleVedtakAAPSamordning.getVarsleVedtakAAPSamordningV1Port();
         VarsleVedtakAAPSamordning payload = new VarsleVedtakAAPSamordning();
         VarsleVedtakAAPSamordningRequest req = new VarsleVedtakAAPSamordningRequest();
         req.setFnr("1fnr2");
@@ -20,6 +20,7 @@ public class Client extends WebServiceGatewaySupport {
         req.getTpnr().add("5tp16");
         req.getTpnr().add("7tp28");
         payload.setVarsleVedtakAAPSamordningRequest(req);
-        port.varsleVedtakAAPSamordning(payload);
+        getWebServiceTemplate().marshalSendAndReceive("http://localhost:8080/ws/varsleVedtakAAPSamordning_v1", payload);
+        //port.varsleVedtakAAPSamordning(payload);
     }
 }
