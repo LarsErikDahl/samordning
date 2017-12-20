@@ -9,12 +9,13 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.5.7.RELEASE</version>
+        <relativePath/>
     </parent>
 
     <groupId>no.nav.samordning</groupId>
     <artifactId>samordning-server</artifactId>
     <version>1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
@@ -30,14 +31,10 @@
             <artifactId>varsle-vedtak-samordning-java</artifactId>
             <version>1-SNAPSHOT</version>
         </dependency>
-        <dependency>
-            <groupId>no.nav.samordning.varslevedtakaap</groupId>
-            <artifactId>varsle-vedtak-aap-java</artifactId>
-            <version>1-SNAPSHOT</version>
-        </dependency>
     </dependencies>
 
     <build>
+        <finalName>app</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -45,13 +42,6 @@
             </plugin>
         </plugins>
     </build>
-
-    <!--dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-    </dependencies-->
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
